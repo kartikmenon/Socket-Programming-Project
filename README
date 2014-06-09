@@ -1,0 +1,18 @@
+Amazing Project: Maze Client CS50
+Team Kadarka: Kartikeya Menon, Zach Kratochvil, Allison Wang
+May 2014
+
+To compile the maze client, use "make" or "make maze" commands. To run the client, use the following format: 
+
+AMStartup [n Number of Avatars 2 - 9] [Difficulty 0 - 9] [Hostname] [opts]
+
+All relevant files to compilation are in the /project directory. 
+
+Inside /project/src/ are the C source files graphics.c, AMStartup.c, lefthandrule.c, client.c
+Inside /project/utils/ are the header files header.h amazing.h lefthandrule.h AMStartup.h maze.h
+
+Lefthandrule.[ch] contains the function that returns the next move for the avatar to make. Client.c represents each instance of the avatar, running in [n Number of Avatars] processes all forked in AMStartup.c. Amazing.h and header.h contain various macro definitions, like MALLOC_CHECK and OUTPUT (for log file) and header.h contains our client's slightly modified version of the avatar. AMStartup.[ch] forks the processes and sets up the shared memory that is used in the maze-solving algorithm. Graphics.c contains all the functions necessary to draw the ASCII rendition of graphics.
+
+Run in the [opts] (i.e., the _LAST_ argument to AMStartup) with -v (verbose) as the last argument to see the the avatar’s moves and coordinates progress, or -g to see the ASCII graphics, or -vg/-gv to see both.
+
+Logfiles can be found in the /project/LogFiles directory. TestFile.txt is the log produced by the unit testing and other tests done in AMBATS.sh
